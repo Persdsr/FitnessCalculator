@@ -27,6 +27,7 @@ public class UserDTO {
 
     public static UserDTO toModel(UserEntity userEntity) {
         UserDTO userDTO = new UserDTO();
+        userDTO.setId(userDTO.getId());
         userDTO.setName(userEntity.getName());
         userDTO.setEmail(userEntity.getEmail());
         userDTO.setAge(userEntity.getAge());
