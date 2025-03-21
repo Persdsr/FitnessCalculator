@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "26998706-9597-40be-957d-5f6e10bf6ab0",
+		"name": "FitnessCalculator API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22001499",
+		"_collection_link": "https://warped-crescent-552421.postman.co/workspace/Team-Workspace~aefebcad-ef6e-4363-814b-babfdab2bcc7/collection/22001499-26998706-9597-40be-957d-5f6e10bf6ab0?action=share&source=collection_link&creator=22001499"
+	},
+	"item": [
+		{
+			"name": "Добавление блюда",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"example\",\r\n    \"calories\": 700,\r\n    \"proteins\": 25,\r\n    \"fats\": 20,\r\n    \"carbohydrates\": 40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление приема пищи",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/meal?userId=1&dishIds=1, 2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meal"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "dishIds",
+							"value": "1, 2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Регистрация пользователя",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"username\",\r\n    \"email\": \"example@mail.ru\",\r\n    \"age\": 18,\r\n    \"height\": 180,\r\n    \"weight\": 68,\r\n    \"goal\": \"WEIGHT_GAIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Дневной отсчет",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/meal/daily-report?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meal",
+						"daily-report"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка дневной нормы",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/meal/check-calories?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meal",
+						"check-calories"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "История приемов пищи",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/meal/meal-history?userId=1&startDate=2025-02-21&endDate=2025-03-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meal",
+						"meal-history"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-02-21"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-03-21"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
