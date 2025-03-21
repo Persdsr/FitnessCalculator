@@ -28,14 +28,17 @@ public class UserEntity {
     @NotBlank(message = "The email is required")
     private String email;
 
+    @NotNull(message = "The age is required")
     @Min(value = 7, message = "The age can't be less then 7")
     @Max(value = 127, message = "The age can't be more then 127")
     private byte age;
 
+    @NotNull(message = "The weight is required")
     @Min(value = 15, message = "The weight can't be less then 15")
     @Max(value = 300, message = "The weight can't be more then 300")
     private float weight;
 
+    @NotNull(message = "The height is required")
     @Min(value = 80, message = "The height can't be less then 80")
     @Max(value = 300, message = "The height can't be more then 300")
     private float height;
