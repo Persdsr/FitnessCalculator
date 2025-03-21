@@ -39,7 +39,7 @@ REST API для отслеживания дневной нормы калори�
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/yourusername/FitnessCalculator.git
+   git clone https://github.com/Persdsr/FitnessCalculator.git
    cd FitnessCalculator
 2. Запустите проект:
    docker-compose up --build
